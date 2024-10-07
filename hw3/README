@@ -1,0 +1,26 @@
+
+- use ./gen_range.sh to generate data files
+
+- to run and measure time
+
+=================================================
+For example:
+
+$ ./gen_range.sh 10000 -s
+Generating sorted sequece data in the range 1..10000
+
+real	0m0.012s
+user	0m0.013s
+sys	0m0.001s
+Data written to 10000.sorted.dat
+
+
+$ time ./hw3 mergesort <10000.sorted.dat 
+READ 10000 elements into array
+BEGIN merge_sort...
+END merge_sort...
+
+real	0m0.005s
+user	0m0.005s
+sys	0m0.000s
+
